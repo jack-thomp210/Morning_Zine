@@ -17,7 +17,7 @@ def morning_read():
 
 	csv_file = open('ZineLinks.csv','w')
 	csv_writer = csv.writer(csv_file)
-	csv_writer.writerow(['final_link', 'article_description','video_link.text', 'final_link', 'summary.text'])
+	csv_writer.writerow(['final_link', 'article_description', 'final_link', 'video_link.text'])
 
 	# Grabbing the title for these links was a formatting nightmare. the title is in the url
 	for article in soup.find_all('li', class_='post-list-item', limit=3): # Change the limit to the number of links you would like for this website.
